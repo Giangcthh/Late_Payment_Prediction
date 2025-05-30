@@ -1,5 +1,8 @@
 # Late Payment Prediction
 This project demonstrates a late payment prediction system featuring model training, feature engineering, and deployment using a message queue architecture with RabbitMQ. The system processes new loan applications, predicts the likelihood of late payment using a pre-trained ensemble model, and outputs the prediction.
+
+Link to demo video: https://drive.google.com/file/d/1pvQGtygxg1GSRJuYjiIDi2evK861q30g/view?usp=sharing
+
 ## Table of Contents
 
 * [Repository Structure](#repository-structure)
