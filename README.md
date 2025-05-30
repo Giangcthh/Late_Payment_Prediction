@@ -39,8 +39,7 @@ loan_default_deployment/
 │   ├── [Feature Engineering] Job cluster.ipynb
 │   ├── 20250530 Late Payment Prediction.ipynb
 │   ├── Architecture.png
-│   ├── demo.mp4
-│   └── Project Presentation.pptx
+│   └── Project Presentation.pdf
 ├── train_model.py            # Script to train and save model/preprocessor
 ├── producer.py               # Script to send new data to RabbitMQ
 ├── consumer_predict.py       # Script to make predictions from RabbitMQ data
