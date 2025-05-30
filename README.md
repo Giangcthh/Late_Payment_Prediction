@@ -32,7 +32,7 @@ loan_default_deployment/
 │   ├── model.joblib
 │   ├── preprocessor.joblib
 │   └── feature_engineering_params.json
-├── note_book_and_ppt/
+├── notebook_and_ppt/
 │   ├── [Feature Engineering] Job cluster.ipynb
 │   ├── 20250530 Late Payment Prediction.ipynb
 │   ├── Architecture.png
