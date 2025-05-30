@@ -57,7 +57,7 @@ The system is divided into two main phases: an offline Training Phase and an onl
 1.  **Data Loading & Merging**: Loads raw data from multiple CSV files (`customer.csv`, `loan.csv`, `state_region.csv`, `job_mapping.xlsx`).
 2.  **Feature Engineering**: Performs extensive feature engineering, including creating new variables, cleaning existing ones, and mapping categorical values. Outlier capping parameters and other derived values (e.g., average interest rates per grade) are calculated and saved.
 3.  **Data Splitting**: Data is split temporally for training to mimic a realistic scenario.
-4.  **Preprocessing**: A `ColumnTransformer` is defined to handle numerical (imputation, scaling) and categorical (imputation, one-hot/ordinal encoding) features.
+4.  **Preprocessing**: A `ColumnTransformer` is defined to handle numerical, categorical and ordinal features.
 5.  **Model Training**: A `WeightedVotingClassifier` (ensemble of LightGBM, CatBoost, XGBoost) is trained on the preprocessed data.
 6.  **Artifact Saving**: The trained preprocessor, model, and feature engineering parameters are saved to disk (`.joblib` and `.json` files) for use in the prediction phase.
 
@@ -111,7 +111,7 @@ Follow these steps to set up and run the loan default prediction system:
     ```
 3.  **Prepare Data:**
     * Place your input CSV files (`customer.csv`, `loan.csv`, `state_region.csv`) and `job_mapping.xlsx` (or `job_mapping.csv`) into the `data/` directory.
-    * Ensure the `saved_model/` directory exists (the training script will create it if not).
+    * Ensure the `saved_model/` directory exists.
 
 ### 2. Setup RabbitMQ
 
@@ -131,7 +131,7 @@ Monitor the console for any errors during training.
 ### 4. Prepare Sample New Applications
 
 - Create a CSV file named new_applications.csv inside the data/ directory.
-- The first row should be a header with the raw feature names expected by producer.py (these are columns from your original merged data before extensive feature engineering in train_model.py).
+- The first row should be a header with the raw feature names expected by producer.py (these are columns from your original merged data before extensive feature engineering in `train_model.py`).
 - Add a few rows of sample new loan application data.
  
 ### 5. Start the Consumer (Prediction Service)
