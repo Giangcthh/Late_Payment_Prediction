@@ -31,18 +31,20 @@ loan_default_deployment/
 │   ├── state_region.csv
 │   ├── job_mapping.xlsx      
 │   └── new_applications.csv  # Sample new data for the producer
+├── images/
+│   └── Architecture.png
+├── notebook_and_ppt/
+│   ├── [Feature Engineering] Job cluster.ipynb
+│   ├── 20250530 Late Payment Prediction.ipynb
+│   └── Project Presentation.pdf
 ├── saved_model/              # Stores trained model, preprocessor, and params
 │   ├── model.joblib
 │   ├── preprocessor.joblib
 │   └── feature_engineering_params.json
-├── notebook_and_ppt/
-│   ├── [Feature Engineering] Job cluster.ipynb
-│   ├── 20250530 Late Payment Prediction.ipynb
-│   ├── Architecture.png
-│   └── Project Presentation.pdf
-├── train_model.py            # Script to train and save model/preprocessor
-├── producer.py               # Script to send new data to RabbitMQ
-├── consumer_predict.py       # Script to make predictions from RabbitMQ data
+├── src/
+│   ├── train_model.py        # Script to train and save model/preprocessor
+│   ├── producer.py           # Script to send new data to RabbitMQ
+│   └── consumer_predict.py   # Script to make predictions from RabbitMQ data
 ├── requirements.txt          # Python libraries needed
 └── README.md                 # This file
 ```
